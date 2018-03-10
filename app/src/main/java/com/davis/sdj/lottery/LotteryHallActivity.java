@@ -26,7 +26,6 @@ public class LotteryHallActivity extends BaseActivity {
 
     @Override
     protected void initVariable() {
-        startActivity(new Intent(this, CaptureActivity.class));
     }
 
     @Override
