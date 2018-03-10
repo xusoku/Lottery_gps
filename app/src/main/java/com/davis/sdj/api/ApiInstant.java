@@ -1,7 +1,6 @@
 package com.davis.sdj.api;
 
 import com.davis.sdj.util.LogUtils;
-import com.google.android.gms.common.api.Api;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
