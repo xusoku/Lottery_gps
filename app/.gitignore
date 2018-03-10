@@ -1,6 +1,3 @@
 /build
-/app/build
-.idea
-.gradle
 *.class
 *.iml

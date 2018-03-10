@@ -99,6 +99,7 @@ dependencies {
     compile 'com.j256.ormlite:ormlite-android:4.48'
     compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
     compile 'com.facebook.stetho:stetho:1.3.1'
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
     //uMeng
     compile 'com.umeng.analytics:analytics:latest.integration'
 
@@ -108,5 +109,4 @@ dependencies {
 
     compile 'com.makeramen:roundedimageview:2.3.0'
 
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }
