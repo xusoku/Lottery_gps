@@ -9,7 +9,6 @@ import com.amap.api.services.core.PoiItem;
 import com.davis.sdj.activity.LoginActivity;
 import com.davis.sdj.util.SharePreferenceUtils;
 import com.davis.sdj.util.WeiXinUtil;
-import com.facebook.stetho.Stetho;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 
 import java.util.ArrayList;
@@ -50,7 +49,6 @@ public class AppApplication extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
 
-        Stetho.initializeWithDefaults(this);
 //        instance
         instance = (AppApplication) getApplicationContext();
 
