@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="显示/隐藏遗漏"
+                android:onClick="doClick"
+                />
+            <Button
+                android:id="@+id/btn_Random"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="机选"
+                android:onClick="doClick"
+                />
+
+            </LinearLayout>
+
+            <com.davis.sdj.views.lotteryview.SelectBallsView
+                android:id="@+id/view_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_measure_100dp"
+                android:layout_marginRight="@dimen/common_measure_100dp"
+                app:numCount="7"
+                app:start="0"
+                app:end="12"
+                app:hasZero="false"
+                app:ballColor="#ee00ff"
+                app:txtSelectedColor="#ffffff"
+                app:txtUnselectedColor="#ee00ff"
+                />
+
+            <com.davis.sdj.views.lotteryview.SelectBallsView
+                android:id="@+id/view_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:numCount="9"
+                app:start="1"
+                app:end="33"
+                app:hasZero="true"
+                app:ballColor="#ff0066"
+                app:txtSelectedColor="#ffffff"
+                app:txtUnselectedColor="#ff0066"
+                />
+
+            <com.davis.sdj.views.lotteryview.SelectBallsView
+                android:id="@+id/view_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:numCount="8"
+                app:start="1"
+                app:end="16"
+                app:hasZero="true"
+                app:ballColor="#0088ff"
+                app:txtSelectedColor="#ffffff"
+                app:txtUnselectedColor="#0088ff"
+                />
+
+            <com.davis.sdj.views.lotteryview.SelectBallsView
+                android:id="@+id/view_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:numCount="7"
+                app:start="1"
+                app:end="6"
+                app:hasZero="false"
+                app:ballColor="#00ff26"
+                app:txtSelectedColor="#ffffff"
+                app:txtUnselectedColor="#00ff26"
+                />
+
+            <com.davis.sdj.views.lotteryview.SelectBallsView
+                android:id="@+id/view_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:numCount="6"
+                app:start="1"
+                app:end="6"
+                app:hasZero="false"
+                app:ballColor="#00ff26"
+                app:txtSelectedColor="#ffffff"
+                app:txtUnselectedColor="#00ff26"
+                app:drawableSelected="@mipmap/ic_launcher"
+                app:drawableUnselected="@mipmap/logo_icon"
+                />
+
+            <Button
+                android:id="@+id/btn_confrim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:onClick="doClick"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

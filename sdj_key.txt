@@ -1,0 +1,24 @@
+别名: sdj.jks
+创建日期: 2017-7-18
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=sdj, OU=sdj, O=sdj, L=ch, ST=s, C=12
+发布者: CN=sdj, OU=sdj, O=sdj, L=ch, ST=s, C=12
+序列号: 33bf1191
+有效期开始日期: Tue Jul 18 16:57:27 CST 2017, 截止日期: Thu Jul 11 16:57:27 CST 2047
+证书指纹:
+         MD5: 3F:3F:12:1F:33:95:A3:49:24:A1:EC:E0:7C:52:FD:1A
+         SHA1: 83:E2:C9:03:CD:DB:2B:B8:EC:4F:33:52:3B:33:42:5F:06:01:3D:FB
+         SHA256: FB:C3:A2:CD:04:B0:D2:E6:5B:71:F1:56:C7:D6:73:90:AF:5A:A0:10:63:28:CF:BF:EC:63:E9:92:EA:C5:E9:15
+         签名算法名称: SHA256withRSA
+         版本: 3
+
+扩展:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: F9 5A E6 07 4B 8B D9 E4   48 F6 18 C0 39 2C 04 0F  .Z..K...H...9,..
+0010: 80 8C 42 0B                                        ..B.
+]

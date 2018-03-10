@@ -1,0 +1,127 @@
+<resources>
+    <string name="app_name">彩票</string>
+
+
+    <string name="index_classic">分类食材</string>
+    <string name="index_tuan">吃货团购</string>
+    <string name="index_rechanger">会员充值</string>
+    <string name="index_youlike">猜你喜欢</string>
+
+
+    <string name="mine_allorder">全部订单</string>
+    <string name="mine_myorder">我的订单</string>
+    <string name="mine_unpay">待付款</string>
+    <string name="mine_unsend">待配送</string>
+    <string name="mine_senging">配送中</string>
+    <string name="mine_chrage">购物车</string>
+    <string name="mine_mycoup">我的优惠券</string>
+    <string name="mine_myaddress">我的收货地址</string>
+    <string name="mine_mytihuo">我要提货</string>
+    <string name="mine_kefu">联系客服</string>
+    <string name="mine_feedback">问题反馈</string>
+    <string name="mine_set">设置</string>
+    <string name="mine_order">充值订单</string>
+    <string name="mine_histroy">历史账单</string>
+    <string name="mine_scoce">我的积分</string>
+
+
+    <string name="mine_location">自动定位当前位置</string>
+    <string name="classic_search">搜索热门关键字</string>
+
+
+    <string name="classic_index_no_adaress">Hi，小食恭候多时了～%s，请输入地址找到为您服务的门店吧!</string>
+
+
+
+
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="msg_default_status">将二维码放入框内， 即可自动扫描</string>
+    <string name="msg_encode_contents_failed">无法根据已有数据生成条码。</string>
+    <string name="msg_unmount_usb">抱歉，SD卡不可访问。</string>
+    <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+    <string name="msg_bulk_mode_scanned">批量扫描：找到条码，已保存</string>
+    <string name="msg_default_mms_subject">Hi</string>
+    <string name="msg_intent_failed">抱歉，无法打开所需软件。 条码内容可能无效。</string>
+    <string name="contents_contact">联系人信息</string>
+    <string name="contents_email">Email地址</string>
+    <string name="contents_location">地理坐标</string>
+    <string name="contents_phone">电话号码</string>
+    <string name="contents_sms">短信地址</string>
+    <string name="contents_text">纯文本</string>
+    <string name="button_add_calendar">添加事件至日历</string>
+    <string name="button_add_contact">添加联系人</string>
+    <string name="button_book_search">打开图书搜索</string>
+    <string name="button_cancel">取消</string>
+    <string name="button_custom_product_search">自定义搜索</string>
+    <string name="button_dial">拨号</string>
+    <string name="button_email">发送email</string>
+    <string name="button_get_directions">获取地址</string>
+    <string name="button_mms">发送彩信</string>
+    <string name="button_ok">确定</string>
+    <string name="button_open_browser">打开浏览器</string>
+    <string name="button_product_search">打开产品搜索</string>
+    <string name="button_search_book_contents">搜索图书内容</string>
+    <string name="button_share_app">共享应用</string>
+    <string name="button_share_bookmark">分享书签</string>
+    <string name="button_share_by_email">通过email分享</string>
+    <string name="button_share_by_sms">通过短信分享</string>
+    <string name="button_share_clipboard">分享剪切板</string>
+    <string name="button_share_contact">分享联系人</string>
+    <string name="button_show_map">显示地图</string>
+    <string name="button_sms">发送短信</string>
+    <string name="button_web_search">网页搜索</string>
+    <string name="button_wifi">连接到网络</string>
+    <string name="history_clear_one_history_text">删除</string>
+    <string name="history_clear_text">删除历史</string>
+    <string name="history_email_title">条码扫描器历史</string>
+    <string name="history_empty">空的</string>
+    <string name="history_empty_detail">没有条码扫描已记录</string>
+    <string name="history_send">发送历史</string>
+    <string name="history_title">历史</string>
+    <string name="menu_encode_mecard">使用MECARD</string>
+    <string name="menu_encode_vcard">使用vCard</string>
+    <string name="menu_help">帮助</string>
+    <string name="menu_history">历史</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_share">分享</string>
+    <string name="msg_default_format">格式</string>
+    <string name="msg_default_meta">元数据</string>
+    <string name="msg_default_time">时间</string>
+    <string name="msg_default_type">类型</string>
+    <string name="msg_error">错误</string>
+    <string name="msg_google_books">Google</string>
+    <string name="msg_google_product">Google</string>
+    <string name="msg_invalid_value">值无效</string>
+    <string name="msg_redirect">重定向</string>
+    <string name="msg_sbc_book_not_searchable">抱歉，无法找到此图书。</string>
+    <string name="msg_sbc_failed">抱歉，搜索时遇到错误。</string>
+    <string name="msg_sbc_no_page_returned">无页面返回</string>
+    <string name="msg_sbc_page">页面</string>
+    <string name="msg_sbc_results">结果</string>
+    <string name="msg_sbc_searching_book">搜索图书…</string>
+    <string name="msg_sbc_snippet_unavailable">摘录不可用</string>
+    <string name="msg_share_explanation">您可以通过在自己的手机上显示条码，并使用其它手机扫描此条码的方式进行分享</string>
+    <string name="msg_share_text">或键入一些文字</string>
+    <string name="msg_sure">你肯定吗？</string>
+    <string name="result_address_book">找到联系人信息</string>
+    <string name="result_calendar">找到日历事件</string>
+    <string name="result_email_address">找到email地址</string>
+    <string name="result_geo">找到地理坐标</string>
+    <string name="result_isbn">找到图书</string>
+    <string name="result_product">找到产品</string>
+    <string name="result_sms">找到短信地址</string>
+    <string name="result_tel">找到电话号码</string>
+    <string name="result_text">找到纯文本</string>
+    <string name="result_uri">找到URL</string>
+    <string name="result_wifi">发现网络配置</string>
+    <string name="sbc_name">Google图书搜索</string>
+    <string name="wifi_changing_network">请求连接到网络\u2026</string>
+    <string name="im_message">消息</string>
+    <string name="empty_conversation">暂无聊天信息</string>
+    <string name="msg_voice">[语音]</string>
+    <string name="msg_pic">[图片]</string>
+    <string name="msg_location">[位置]</string>
+    <string name="msg_gift">[礼物]</string>
+
+</resources>
