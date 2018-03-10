@@ -23,6 +23,7 @@ public class AppApplication extends MultiDexApplication {
 
     /**
      * 全局context单例
+     *
      */
     private static AppApplication instance  = null;
 
