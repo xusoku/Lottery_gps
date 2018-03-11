@@ -49,30 +49,6 @@
         <service android:name="com.amap.api.location.APSService" />
         <service android:name=".service.ScreenSaverS" />
 
-        <activity
-            android:name=".activity.FeedBackActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.SettingActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.LoginActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".wxapi.WXEntryActivity"
-            android:exported="true"
-            android:theme="@android:style/Theme.Translucent" />
-        <activity
-            android:name=".wxapi.WXPayEntryActivity"
-            android:exported="true"
-            android:launchMode="singleTop" />
-        <!--
-             ATTENTION: This was auto-generated to add Google Play services to your project for
-             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
-        -->
-
-        <activity android:name=".activity.AboutActivity" />
 
         <!-- 调用新浪客户端分享，需要注册的回调activity -->
         <activity
@@ -92,13 +68,11 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:windowSoftInputMode="stateHidden|adjustResize">
-
             <!--
             	AuthorizeAdapter表示一个继承自cn.sharesdk.framework.authorize.AuthorizeAdapter
             	的类，这个类可以监听到页面的生命周期，也可以获取授权页面的各种UI控件。
             	开发者可以通过继承AuthorizeAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
             -->
-
             <meta-data
                 android:name="AuthorizeAdapter"
                 android:value="com.davis.kangpinhui.adapter.MyAuthorizeAdapter" />
@@ -112,24 +86,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.VideoPlayerActivity" />
-        <activity android:name=".activity.ScreenSaverActivity" />
-        <activity
-            android:name=".activity.base.IsOnclickActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-
-
-
-
-        <activity android:name=".lottery.LotteryHallActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-
         <!-- 扫码页面 -->
         <activity
             android:name="com.google.zxing.client.android.CaptureActivity"
@@ -190,6 +146,43 @@
                     android:host="scan"
                     android:path="/"
                     android:scheme="zxing" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".activity.FeedBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <activity android:name=".activity.AboutActivity" />
+        <activity android:name=".activity.VideoPlayerActivity" />
+        <activity android:name=".activity.ScreenSaverActivity" />
+        <activity
+            android:name=".activity.base.IsOnclickActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity android:name=".lottery.LotteryHallActivity">
+
+        </activity>
+        <activity android:name=".lottery.TestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

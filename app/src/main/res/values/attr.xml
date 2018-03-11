@@ -75,6 +75,7 @@
         <attr name="start" format="integer"/>
         <attr name="end" format="integer"/>
         <attr name="hasZero" format="boolean"/>
+        <attr name="missValue" format="boolean"/>
         <attr name="ballColor" format="color"/>
         <attr name="txtSelectedColor" format="color"/>
         <attr name="txtUnselectedColor" format="color"/>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_Random"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="机选"
+                    android:onClick="doClick"
+                    />
+                <TextView
+                    android:id="@+id/zhushu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="胆码：红球，最少选择1个，最多5个"/>
+            <com.davis.sdj.views.lotteryview.SelectBallsView
+                android:id="@+id/view_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:numCount="9"
+                app:start="1"
+                app:end="33"
+                app:hasZero="true"
+                app:ballColor="#ff0000"
+                app:txtSelectedColor="#ffffff"
+                app:txtUnselectedColor="#ff0000"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="拖码：红球，最少选择2个，最多20个"/>
+
+            <com.davis.sdj.views.lotteryview.SelectBallsView
+                android:id="@+id/view_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:numCount="9"
+                app:start="1"
+                app:end="33"
+                app:hasZero="true"
+                app:ballColor="#ff0000"
+                app:txtSelectedColor="#ffffff"
+                app:txtUnselectedColor="#ff0000"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="蓝球，最少选择1个"/>
+
+            <com.davis.sdj.views.lotteryview.SelectBallsView
+                android:id="@+id/view_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:numCount="8"
+                app:start="1"
+                app:end="16"
+                app:hasZero="true"
+                app:ballColor="#0088ff"
+                app:missValue="false"
+                app:txtSelectedColor="#ffffff"
+                app:txtUnselectedColor="#0088ff"
+                />
+
+            <Button
+                android:id="@+id/btn_confrim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:onClick="doClick"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -114,6 +114,7 @@ public class SelectBallsView extends View {
             txtSelectedColor = a.getColor(R.styleable.SelectBallsView_txtSelectedColor, Color.parseColor("#ffffff"));
             txtUnselectedColor = a.getColor(R.styleable.SelectBallsView_txtUnselectedColor, Color.parseColor("#eb1c42"));
             hasZero = a.getBoolean(R.styleable.SelectBallsView_hasZero, true);
+            showMissValue = a.getBoolean(R.styleable.SelectBallsView_missValue, false);
             bitmapSelected = BitmapFactory.decodeResource(resources, a.getResourceId(R.styleable.SelectBallsView_drawableSelected, 0));
             bitmapUnselected = BitmapFactory.decodeResource(resources, a.getResourceId(R.styleable.SelectBallsView_drawableUnselected, 0));
         }
@@ -320,6 +321,11 @@ public class SelectBallsView extends View {
         return (int) (dpValue * scale + 0.5f);
     }
 
+
+    public int getBallsSize() {
+        return balls.size();
+    }
+
     /**
      * 获取选中球的号码
      *
@@ -377,6 +383,19 @@ public class SelectBallsView extends View {
             i=getSelectBall(i);
             LogUtils.e("setBallRandomNumber",i+"===");
             Ball tempBall = balls.get(i);
+            tempBall.setSelected(true);
+            requestLayout();
+            invalidate();
+        }
+
+    }
+    /**
+     * @param number  设置选中的球的下标
+     */
+    public void setBallNumber(List<Integer> number) {
+        initBalls();
+        for (int j = 0; j <number.size(); j++) {
+            Ball tempBall = balls.get(number.get(j));
             tempBall.setSelected(true);
             requestLayout();
             invalidate();

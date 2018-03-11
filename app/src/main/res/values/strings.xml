@@ -32,8 +32,6 @@
     <string name="classic_index_no_adaress">Hi，小食恭候多时了～%s，请输入地址找到为您服务的门店吧!</string>
 
 
-
-
     <string name="cancel">取消</string>
     <string name="confirm">确定</string>
     <string name="msg_default_status">将二维码放入框内， 即可自动扫描</string>
