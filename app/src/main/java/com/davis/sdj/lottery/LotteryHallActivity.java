@@ -52,17 +52,7 @@ public class LotteryHallActivity extends BaseActivity {
 
 
     }
-    public  int combination(int m,int n){
-        int k = 1;
-        int j = 1;
-        for(int i = n; i>=1;i--){
-            k = k*m;
-            j = j*n;
-            m--;
-            n--;
-        }
-        return k/j;
-    }
+
     @Override
     public void doClick(View view) {
 

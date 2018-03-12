@@ -4,12 +4,16 @@ import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.text.TextUtils;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.davis.sdj.adapter.base.ViewHolder;
 
 import java.util.List;
 
@@ -250,6 +254,25 @@ public abstract class CommonRecyclerAdapter<Model> extends
 			}
 			return (T) view;
 		}
+
+		/**
+		 * 为TextView设置字符串
+		 *
+		 * @param viewId
+		 * @param text
+		 * @return
+		 */
+		public BaseViewHolder setText(int viewId, String text)
+		{
+			if (TextUtils.isEmpty(text)){
+				text="";
+			}
+			TextView view = getView(viewId);
+			view.setText(text);
+			return this;
+		}
+
+
 	}
 
 }

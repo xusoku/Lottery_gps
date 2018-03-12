@@ -200,7 +200,7 @@ public class LoginActivity extends BaseActivity {
                 } else {
                     if(pwdb&&loginb&&codeb){
                         progressDialog.show();
-                        Call<BaseModel> call=ApiInstant.getInstant().userRegister(AppApplication.apptype, mobile, pwd, code);
+                        Call<BaseModel> call=ApiInstant.getInstant().userRegister("", mobile, pwd, code);
                         call.enqueue(new ApiCallback<BaseModel>() {
                             @Override
                             public void onSucssce(BaseModel baseModel) {

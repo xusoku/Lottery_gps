@@ -26,21 +26,13 @@ public class AppApplication extends MultiDexApplication {
      */
     private static AppApplication instance  = null;
 
-    public static String apptype = "android";
-    public static String shopid = "";
     public static String token = "";
 
-    public static String kefu="4009216797";
 
     public static PoiItem poiItem;
 
 
     public static IWXAPI wxApi;
-
-    //充值还是支付
-    public  boolean  isYue=false;
-    //订单号
-    public String numberCode="";
 
     public static AppApplication getApplication() {
         return instance;
@@ -55,7 +47,6 @@ public class AppApplication extends MultiDexApplication {
 
         token=SharePreferenceUtils.getSharedPreferences().getString("token","");
 
-        shopid=SharePreferenceUtils.getSharedPreferences().getString("shopid","");
 
         wxApi = WeiXinUtil.WXInit(getApplicationContext());
 
