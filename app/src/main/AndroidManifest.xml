@@ -172,16 +172,18 @@
         <activity
             android:name=".activity.base.IsOnclickActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <activity android:name=".lottery.LotteryHallActivity"></activity>
-        <activity android:name=".lottery.TestActivity">
-
-        </activity>
-        <activity android:name=".lottery.LotteryOrderActivity">
+        <activity android:name=".lottery.LotteryHallActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".lottery.TestActivity">
+
+
+        </activity>
+        <activity android:name=".lottery.LotteryOrderActivity">
         </activity>
     </application>
 
