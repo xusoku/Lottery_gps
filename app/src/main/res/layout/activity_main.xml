@@ -1,25 +1,390 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.davis.sdj.views.HackyViewPager
-        android:id="@+id/viewPager"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:persistentDrawingCache="animation" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <View
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_measure_161dp"
+            android:background="@color/colorgray5"></RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/orange"></LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:background="@mipmap/ic_down_float_shadow" />
+        android:layout_height="@dimen/common_measure_110dp">
 
-    <com.davis.sdj.views.viewpagerindicator.FixPageIndicator
-        android:id="@+id/indicator"
+        <ImageView
+            android:id="@+id/main_iv_logo"
+            android:layout_width="@dimen/common_measure_40dp"
+            android:layout_height="@dimen/common_measure_40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_measure_20dp"
+            android:src="@mipmap/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_measure_10dp"
+            android:layout_toRightOf="@id/main_iv_logo"
+            android:text="中国福利彩票"
+            android:textColor="@color/c222222"
+            android:textSize="@dimen/text_size_22"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/main_iv_cropimage"
+            android:layout_width="@dimen/common_measure_76dp"
+            android:layout_height="@dimen/common_measure_76dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_measure_20dp"
+            android:layout_marginRight="@dimen/common_measure_20dp"
+            android:src="@mipmap/erweima" />
+    </RelativeLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/common_measure_70dp" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/common_measure_110dp"
+        android:layout_marginBottom="@dimen/common_measure_20dp"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/common_measure_20dp"
+            android:layout_marginRight="@dimen/common_measure_20dp"
+            android:background="@drawable/bg_uncri_write">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/main_recycler"
+                android:layout_marginTop="@dimen/common_measure_16dp"
+                android:layout_marginBottom="@dimen/common_measure_22dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            <ImageView
+                android:id="@+id/main_iv_refreash"
+                android:layout_width="@dimen/common_measure_26dp"
+                android:layout_height="@dimen/common_measure_26dp"
+                android:layout_marginLeft="@dimen/common_measure_20dp"
+                android:layout_marginTop="5dp"
+                android:onClick="doClick"
+                android:layout_below="@id/main_recycler"
+                android:src="@mipmap/refreash_icon" />
+
+            <TextView
+                android:id="@+id/main_tv_huan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_recycler"
+                android:paddingLeft="@dimen/common_measure_10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/main_iv_refreash"
+                android:text="换一注"
+                android:onClick="doClick"
+                android:textColor="@color/c222222"
+                android:textSize="@dimen/text_size_17" />
+
+            <TextView
+                android:id="@+id/main_tv_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/main_recycler"
+                android:layout_marginRight="@dimen/common_measure_20dp"
+                android:background="@drawable/bg_uncri_red"
+                android:gravity="center"
+                android:text="好，就买这注"
+                android:onClick="doClick"
+                android:textColor="@color/d02f2b"
+                android:textSize="@dimen/text_size_17" />
+
+            <TextView
+                android:id="@+id/main_tv_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_recycler"
+                android:layout_marginRight="@dimen/common_measure_22dp"
+                android:layout_toLeftOf="@id/main_tv_one"
+                android:background="@drawable/bg_uncri_red"
+                android:gravity="center"
+                android:text="随机买5注"
+                android:onClick="doClick"
+                android:textColor="@color/d02f2b"
+                android:textSize="@dimen/text_size_17" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/common_measure_20dp"
+            android:layout_marginRight="@dimen/common_measure_20dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/common_measure_10dp">
+
+                <LinearLayout
+                    android:id="@+id/mian_ssq_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/common_measure_20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_uncri_write"
+                    android:gravity="center"
+                    android:onClick="doClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ssq" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="双色球"
+                        android:textColor="@color/c222222"
+                        android:textSize="@dimen/text_size_17" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mian_7lecai_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_uncri_write"
+                    android:gravity="center"
+                    android:onClick="doClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/qlc" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="七乐彩"
+                        android:textColor="@color/c222222"
+                        android:textSize="@dimen/text_size_17" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/common_measure_20dp"
+            android:layout_marginRight="@dimen/common_measure_20dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/common_measure_10dp">
+
+                <LinearLayout
+                    android:id="@+id/mian_f3d_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/common_measure_20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_uncri_write"
+                    android:gravity="center"
+                    android:onClick="doClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/fc3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="福彩3D"
+                        android:textColor="@color/c222222"
+                        android:textSize="@dimen/text_size_17" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mian_shiwu_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_uncri_write"
+                    android:gravity="center"
+                    android:onClick="doClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/shiwuxuan5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="十五选五"
+                        android:textColor="@color/c222222"
+                        android:textSize="@dimen/text_size_17" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/common_measure_20dp"
+            android:layout_marginRight="@dimen/common_measure_20dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/common_measure_10dp">
+
+                <LinearLayout
+                    android:id="@+id/mian_kj_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/common_measure_20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_uncri_write"
+                    android:gravity="center"
+                    android:onClick="doClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/kjgg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="开奖公告"
+                        android:textColor="@color/c222222"
+                        android:textSize="@dimen/text_size_17" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mian_zd_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_uncri_write"
+                    android:gravity="center"
+                    android:onClick="doClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/zdtj" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="站点统计"
+                        android:textColor="@color/c222222"
+                        android:textSize="@dimen/text_size_17" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/common_measure_20dp"
+            android:layout_marginRight="@dimen/common_measure_20dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/common_measure_10dp">
+
+                <LinearLayout
+                    android:id="@+id/mian_smdj_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/common_measure_20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_uncri_write"
+                    android:gravity="center"
+                    android:onClick="doClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/smdj" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="扫码兑奖"
+                        android:textColor="@color/c222222"
+                        android:textSize="@dimen/text_size_17" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mian_smyw_linear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_uncri_write"
+                    android:gravity="center"
+                    android:onClick="doClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/smyw" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="扫码运维"
+                        android:textColor="@color/c222222"
+                        android:textSize="@dimen/text_size_17" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
