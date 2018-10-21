@@ -113,3 +113,7 @@ public static final int *;
 -printusage unused.txt
 #混淆前后的映射
 -printmapping mapping.txt
+
+-keep class com.baidu.** {*;}
+-keep class mapsdkvi.com.** {*;}
+-dontwarn com.baidu.**

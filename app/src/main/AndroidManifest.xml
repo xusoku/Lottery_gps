@@ -43,10 +43,8 @@
             android:name="UMENG_CHANNEL"
             android:value="${value}" />
         <meta-data
-            android:name="com.amap.api.v2.apikey"
-            android:value="bdfdb70b38e57df3dadec378693f0ec2" />
-        <!-- 定位需要的服务 -->
-        <service android:name="com.amap.api.location.APSService" />
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="aB7ndBs1M5lF6mdtoqNGmrOj8atoSjjA" />
         <service android:name=".service.ScreenSaverS" />
 
         <!-- 调用新浪客户端分享，需要注册的回调activity -->
@@ -172,12 +170,14 @@
         <activity
             android:name=".activity.base.IsOnclickActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <activity android:name=".lottery.LotteryHallActivity">
+        <activity android:name=".lottery.LotteryHallActivity"></activity>
+        <activity android:name=".lottery.TestActivity" />
+        <activity android:name=".lottery.LotteryOrderActivity" />
+        <activity android:name=".activity.MainActivity">
 
         </activity>
-        <activity android:name=".lottery.TestActivity"></activity>
-        <activity android:name=".lottery.LotteryOrderActivity"></activity>
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".gps.Main2Activity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
