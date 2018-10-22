@@ -11,8 +11,14 @@ import android.widget.Button;
 
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BaiduMapOptions;
+import com.baidu.mapapi.map.BitmapDescriptor;
+import com.baidu.mapapi.map.BitmapDescriptorFactory;
 import com.baidu.mapapi.map.MapStatus;
+import com.baidu.mapapi.map.MapStatusUpdate;
+import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.Marker;
+import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.davis.sdj.R;
 import com.davis.sdj.activity.base.BaseActivity;
@@ -24,7 +30,8 @@ import java.io.InputStream;
 
 public class Main2Activity extends BaseActivity {
 
-
+    LatLng center;
+    BitmapDescriptor bdC = BitmapDescriptorFactory.fromResource(R.mipmap.logo_icon);
     private DrawerLayout drawer_layout;
     private Button btn_start, btn_end;
     private MapView mMapView;
@@ -46,34 +53,7 @@ public class Main2Activity extends BaseActivity {
     protected void initVariable() {
 
 
-        MapStatus.Builder builder = new MapStatus.Builder();
-        LatLng center = new LatLng(39.915071, 116.403907); // 默认 天安门
-        float zoom = 11.0f; // 默认 11级
 
-        /* 该Intent是OfflineDemo中查看离线地图调起的 */
-        Intent intent = getIntent();
-        if (null != intent) {
-            mEnableCustomStyle = intent.getBooleanExtra("customStyle", true);
-            center = new LatLng(intent.getDoubleExtra("y", 39.915071),
-                    intent.getDoubleExtra("x", 116.403907));
-            zoom = intent.getFloatExtra("level", 11.0f);
-        }
-        builder.target(center).zoom(zoom);
-
-
-        /**
-         * MapView (TextureMapView)的
-         * {@link MapView.setCustomMapStylePath(String customMapStylePath)}
-         * 方法一定要在MapView(TextureMapView)创建之前调用。
-         * 如果是setContentView方法通过布局加载MapView(TextureMapView), 那么一定要放置在
-         * MapView.setCustomMapStylePath方法之后执行，否则个性化地图不会显示
-         */
-        setMapCustomFile(this, CUSTOM_FILE_NAME);
-
-//        mMapView = new MapView(this, new BaiduMapOptions());
-//        MapView.setMapCustomEnable(false);
-
-        MapView.setMapCustomEnable(true);
     }
 
     @Override
@@ -90,6 +70,35 @@ public class Main2Activity extends BaseActivity {
     @Override
     protected void initData() {
 
+        MapStatus.Builder builder = new MapStatus.Builder();
+         center = new LatLng(31.081981, 121.528337); // 默认  智慧园
+        float zoom = 17.0f; // 默认 8级
+
+        /* 该Intent是OfflineDemo中查看离线地图调起的 */
+//        Intent intent = getIntent();
+//        if (null != intent) {
+//            mEnableCustomStyle = intent.getBooleanExtra("customStyle", true);
+//            center = new LatLng(intent.getDoubleExtra("y", 39.915071),
+//                    intent.getDoubleExtra("x", 116.403907));
+//            zoom = intent.getFloatExtra("level", 11.0f);
+//        }
+        builder.target(center).zoom(zoom);
+        MapStatusUpdate msu = MapStatusUpdateFactory.newMapStatus(builder.build());
+        mBaiduMap.animateMapStatus(msu);
+
+        /**
+         * MapView (TextureMapView)的
+         * {@link MapView.setCustomMapStylePath(String customMapStylePath)}
+         * 方法一定要在MapView(TextureMapView)创建之前调用。
+         * 如果是setContentView方法通过布局加载MapView(TextureMapView), 那么一定要放置在
+         * MapView.setCustomMapStylePath方法之后执行，否则个性化地图不会显示
+         */
+//        setMapCustomFile(this, CUSTOM_FILE_NAME);
+
+//        mMapView = new MapView(this, new BaiduMapOptions());
+//        MapView.setMapCustomEnable(false);
+
+        MapView.setMapCustomEnable(false);
     }
 
     @Override
@@ -102,11 +111,20 @@ public class Main2Activity extends BaseActivity {
         switch (view.getId()) {
             case R.id.btn_start:
 //                drawer_layout.openDrawer(Gravity.START);
-                setIconCustom(this,R.mipmap.logo_icon);
+                MarkerOptions ooC = new MarkerOptions()
+                        .position(center)
+                        .icon(bdC)
+                        .perspective(false)
+                        .anchor(0.5f, 0.5f)
+                        .zIndex(7);
+                    // 生长动画
+                    ooC.animateType(MarkerOptions.MarkerAnimateType.grow);
+               Marker mMarkerC = (Marker) (mBaiduMap.addOverlay(ooC));
 
                 break;
             case R.id.btn_end:
 //                drawer_layout.openDrawer(Gravity.END);
+                mBaiduMap.setMapType(BaiduMap.MAP_TYPE_SATELLITE);
                 break;
         }
     }
