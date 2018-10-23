@@ -13,8 +13,8 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.davis.lottery.R;
 import com.davis.sdj.AppApplication;
-import com.davis.sdj.R;
 import com.davis.sdj.activity.base.BaseActivity;
 import com.davis.sdj.api.ApiCallback;
 import com.davis.sdj.api.ApiInstant;

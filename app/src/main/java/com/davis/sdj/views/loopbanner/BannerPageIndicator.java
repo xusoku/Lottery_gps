@@ -15,7 +15,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.util.CommonManager;
 import com.davis.sdj.views.viewpagerindicator.PageIndicator;
 import com.davis.sdj.views.viewpagerindicator.scrollbar.ScrollBar;

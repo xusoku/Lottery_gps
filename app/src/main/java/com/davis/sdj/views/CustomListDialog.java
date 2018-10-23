@@ -11,7 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.adapter.base.CommonBaseAdapter;
 import com.davis.sdj.adapter.base.ViewHolder;
 

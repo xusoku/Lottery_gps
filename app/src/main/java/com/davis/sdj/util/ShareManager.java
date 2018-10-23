@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.views.CustomDialog;
 
 import cn.sharesdk.framework.Platform;

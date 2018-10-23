@@ -6,7 +6,7 @@ import android.util.DisplayMetrics;
 import android.view.Window;
 import android.view.WindowManager.LayoutParams;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 
 
 public class CustomDialog extends Dialog {

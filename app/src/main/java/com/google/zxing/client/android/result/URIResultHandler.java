@@ -16,7 +16,7 @@
 
 package com.google.zxing.client.android.result;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.google.zxing.client.android.LocaleManager;
 import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.URIParsedResult;

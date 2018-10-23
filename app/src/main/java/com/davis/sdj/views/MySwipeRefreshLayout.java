@@ -5,7 +5,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 
 /**
  * Created by wbz360 on 2015/12/2.

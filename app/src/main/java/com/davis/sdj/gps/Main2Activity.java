@@ -2,17 +2,22 @@ package com.davis.sdj.gps;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Point;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BaiduMapOptions;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
+import com.baidu.mapapi.map.InfoWindow;
+import com.baidu.mapapi.map.InfoWindow.OnInfoWindowClickListener;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
@@ -20,13 +25,16 @@ import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.model.LatLng;
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.activity.base.BaseActivity;
+import com.davis.sdj.util.LogUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Main2Activity extends BaseActivity {
 
@@ -39,6 +47,7 @@ public class Main2Activity extends BaseActivity {
     private BaiduMap mBaiduMap;
 
     private boolean mEnableCustomStyle = true;
+    Marker mMarkerC;
 
 
     //用于设置个性化地图的样式文件
@@ -52,8 +61,40 @@ public class Main2Activity extends BaseActivity {
     @Override
     protected void initVariable() {
 
+//        Timer timer=new Timer();
+//        timer.schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//                if(mMarkerC!=null) {
+//                    LogUtils.e("mMarkerC", mMarkerC.getAnchorX() + "--" + mMarkerC.getAnchorY());
+//                }
+//            }
+//        },1000,1000);
 
+    }
 
+    public void markOverly(){
+        InfoWindow mInfoWindow;
+        //生成一个TextView用户在地图中显示InfoWindow
+        TextView location = new TextView(this);
+        location.setBackgroundResource(R.mipmap.map_pop_min);
+        location.setPadding(30, 20, 30, 50);
+        location.setText("sdfsdf");
+        location.setTextColor(Color.parseColor("#000000"));
+        //将marker所在的经纬度的信息转化成屏幕上的坐标
+        final LatLng ll = mMarkerC.getPosition();
+        //为弹出的InfoWindow添加点击事件
+        OnInfoWindowClickListener listener = new OnInfoWindowClickListener() {
+            public void onInfoWindowClick() {
+                LatLng llNew = new LatLng(ll.latitude + 0.005,
+                        ll.longitude + 0.005);
+                mMarkerC.setPosition(llNew);
+                mBaiduMap.hideInfoWindow();
+            }
+        };
+
+        mInfoWindow = new InfoWindow(BitmapDescriptorFactory.fromView(location), ll, -50, listener);
+        mBaiduMap.showInfoWindow(mInfoWindow);
     }
 
     @Override
@@ -115,16 +156,15 @@ public class Main2Activity extends BaseActivity {
                         .position(center)
                         .icon(bdC)
                         .perspective(false)
-                        .anchor(0.5f, 0.5f)
+//                        .anchor(0.5f, 0.5f)
                         .zIndex(7);
                     // 生长动画
                     ooC.animateType(MarkerOptions.MarkerAnimateType.grow);
-               Marker mMarkerC = (Marker) (mBaiduMap.addOverlay(ooC));
+                    mMarkerC = (Marker) (mBaiduMap.addOverlay(ooC));
 
                 break;
             case R.id.btn_end:
-//                drawer_layout.openDrawer(Gravity.END);
-                mBaiduMap.setMapType(BaiduMap.MAP_TYPE_SATELLITE);
+                markOverly();
                 break;
         }
     }
@@ -196,6 +236,7 @@ public class Main2Activity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        bdC.recycle();
         // 销毁地图前线关闭个性化地图，否则会出现资源无法释放
         MapView.setMapCustomEnable(false);
         // activity 销毁时同时销毁地图控件

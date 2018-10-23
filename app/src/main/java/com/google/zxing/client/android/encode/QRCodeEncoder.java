@@ -25,7 +25,7 @@ import android.provider.ContactsContract;
 import android.telephony.PhoneNumberUtils;
 import android.util.Log;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.MultiFormatWriter;

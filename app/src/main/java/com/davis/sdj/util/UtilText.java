@@ -15,7 +15,7 @@ import android.text.style.URLSpan;
 import android.text.style.UnderlineSpan;
 
 import com.davis.sdj.AppApplication;
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 
 import java.text.DecimalFormat;
 

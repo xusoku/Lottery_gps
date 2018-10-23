@@ -5,7 +5,8 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 
-import com.davis.sdj.R;
+
+import com.davis.lottery.R;
 
 import cn.sharesdk.framework.TitleLayout;
 import cn.sharesdk.framework.authorize.AuthorizeAdapter;

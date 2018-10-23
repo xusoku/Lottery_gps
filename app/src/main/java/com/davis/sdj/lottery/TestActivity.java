@@ -3,7 +3,7 @@ package com.davis.sdj.lottery;
 import android.view.View;
 import android.widget.TextView;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.activity.base.BaseActivity;
 import com.davis.sdj.util.CombineUtil;
 import com.davis.sdj.util.LogUtils;

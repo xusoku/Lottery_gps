@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 
+import com.davis.lottery.R;
 import com.davis.sdj.AppApplication;
-import com.davis.sdj.R;
 import com.davis.sdj.activity.base.BaseActivity;
 import com.davis.sdj.api.ApiService;
 import com.davis.sdj.util.DownLoadSoftUpdate;

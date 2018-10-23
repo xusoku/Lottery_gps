@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 
 
 public class ViewHolder

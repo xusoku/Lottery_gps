@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 
 
 public class CustomAlterDialog {

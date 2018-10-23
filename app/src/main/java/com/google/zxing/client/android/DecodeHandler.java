@@ -19,7 +19,7 @@ package com.google.zxing.client.android;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.MultiFormatReader;

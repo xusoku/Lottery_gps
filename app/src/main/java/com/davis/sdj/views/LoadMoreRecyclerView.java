@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.adapter.recycleradapter.CommonRecyclerAdapter;
 import com.davis.sdj.util.LogUtils;
 

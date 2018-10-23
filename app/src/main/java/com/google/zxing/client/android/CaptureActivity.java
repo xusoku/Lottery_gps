@@ -49,7 +49,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.activity.base.BaseActivity;
 import com.davis.sdj.util.LogUtils;
 import com.davis.sdj.views.CustomAlterDialog;

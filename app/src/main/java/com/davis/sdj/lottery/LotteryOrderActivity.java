@@ -4,7 +4,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.activity.base.BaseActivity;
 import com.davis.sdj.adapter.recycleradapter.CommonRecyclerAdapter;
 import com.davis.sdj.util.CombineUtil;

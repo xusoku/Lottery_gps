@@ -29,7 +29,7 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.util.DimenUtils;
 import com.davis.sdj.util.FileUtils;
 import com.davis.sdj.util.LogUtils;

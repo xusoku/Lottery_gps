@@ -17,7 +17,7 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 
 
 /**

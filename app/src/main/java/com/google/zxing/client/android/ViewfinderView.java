@@ -16,7 +16,7 @@
 
 package com.google.zxing.client.android;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.google.zxing.ResultPoint;
 import com.google.zxing.client.android.camera.CameraManager;
 

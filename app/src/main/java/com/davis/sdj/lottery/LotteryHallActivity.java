@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.activity.base.BaseActivity;
 import com.davis.sdj.util.ToastUitl;
 import com.davis.sdj.views.lotteryview.SelectBallsView;

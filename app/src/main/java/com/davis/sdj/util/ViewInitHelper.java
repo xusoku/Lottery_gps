@@ -21,7 +21,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.davis.sdj.AppApplication;
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.activity.AboutActivity;
 import com.davis.sdj.api.ApiService;
 import com.davis.sdj.model.Banner;

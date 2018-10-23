@@ -7,8 +7,8 @@ import android.widget.AbsListView;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.davis.lottery.R;
 import com.davis.sdj.AppApplication;
-import com.davis.sdj.R;
 import com.davis.sdj.adapter.base.ViewHolder;
 import com.davis.sdj.api.ApiCallback;
 import com.davis.sdj.api.ApiInstant;

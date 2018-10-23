@@ -16,7 +16,7 @@ import android.widget.RemoteViews;
 import android.widget.Toast;
 
 import com.davis.sdj.AppApplication;
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.activity.SettingActivity;
 import com.davis.sdj.api.ApiCallback;
 import com.davis.sdj.api.ApiInstant;

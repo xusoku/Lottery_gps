@@ -22,7 +22,7 @@ import android.content.pm.ResolveInfo;
 import android.graphics.BitmapFactory;
 import android.provider.Browser;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.Result;

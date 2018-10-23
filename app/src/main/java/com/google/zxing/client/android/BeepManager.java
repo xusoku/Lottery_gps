@@ -27,7 +27,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 
 import java.io.Closeable;
 import java.io.IOException;

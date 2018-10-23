@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.activity.base.BaseActivity;
 import com.davis.sdj.adapter.recycleradapter.CommonRecyclerAdapter;
 import com.davis.sdj.util.CombineUtil;

@@ -11,7 +11,7 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 
 
 /**

@@ -53,7 +53,7 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.Scroller;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

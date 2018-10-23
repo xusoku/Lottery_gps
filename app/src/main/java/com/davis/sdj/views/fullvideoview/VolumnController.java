@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 
 
 public class VolumnController {

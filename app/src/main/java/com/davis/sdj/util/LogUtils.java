@@ -1,6 +1,6 @@
 package com.davis.sdj.util;
 
-import com.davis.sdj.BuildConfig;
+import com.davis.lottery.BuildConfig;
 
 /**
  * the logger

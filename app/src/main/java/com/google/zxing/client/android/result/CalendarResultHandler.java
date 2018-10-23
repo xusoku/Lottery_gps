@@ -19,7 +19,7 @@ package com.google.zxing.client.android.result;
 import android.content.ActivityNotFoundException;
 import android.util.Log;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.google.zxing.client.result.CalendarParsedResult;
 import com.google.zxing.client.result.ParsedResult;
 

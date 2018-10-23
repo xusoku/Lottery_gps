@@ -25,7 +25,7 @@ android {
             storePassword "123456"
             keyAlias "sdj.jks"
             keyPassword "123456"
-            storeFile file('/Users/xushengfu/AndroidStudioProjects/Android_Lottery/sdj.jks')
+            storeFile file('/Users/davis/AndroidStudioProjects/Lottery/sdj.jks')
         }
     }
     buildTypes {

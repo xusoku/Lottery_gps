@@ -15,7 +15,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.davis.sdj.R;
+import com.davis.lottery.R;
 import com.davis.sdj.util.LogUtils;
 
 import java.util.ArrayList;
