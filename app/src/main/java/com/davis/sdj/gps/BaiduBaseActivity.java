@@ -33,7 +33,7 @@ import java.io.InputStream;
 public abstract class BaiduBaseActivity extends BaseActivity {
 
     LatLng center;
-    BitmapDescriptor bdC = BitmapDescriptorFactory.fromResource(R.mipmap.logo_icon);
+    BitmapDescriptor bdC = BitmapDescriptorFactory.fromResource(R.mipmap.icon_gcoding);
     public MapView mMapView;
 
     public BaiduMap mBaiduMap;
@@ -45,12 +45,6 @@ public abstract class BaiduBaseActivity extends BaseActivity {
 
     public void markOverly(String text) {
         InfoWindow mInfoWindow;
-        //生成一个TextView用户在地图中显示InfoWindow
-        TextView location = new TextView(this);
-        location.setBackgroundResource(R.mipmap.map_pop_min);
-        location.setPadding(30, 20, 30, 50);
-        location.setText(text);
-        location.setTextColor(Color.parseColor("#000000"));
         //将marker所在的经纬度的信息转化成屏幕上的坐标
         final LatLng ll = mMarkerC.getPosition();
         //为弹出的InfoWindow添加点击事件
@@ -79,6 +73,8 @@ public abstract class BaiduBaseActivity extends BaseActivity {
         MarkerOptions ooC = new MarkerOptions()
                 .position(center)
                 .icon(bdC)
+                .scaleX(1.4f)
+                .scaleY(1.4f)
                 .perspective(false)
                 .zIndex(7);
         // 生长动画

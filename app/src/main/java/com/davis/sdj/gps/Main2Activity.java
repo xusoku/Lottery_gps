@@ -26,6 +26,7 @@ import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.davis.lottery.R;
+import com.davis.sdj.activity.LoginActivity;
 import com.davis.sdj.activity.base.BaseActivity;
 import com.davis.sdj.util.LogUtils;
 
@@ -81,7 +82,8 @@ public class Main2Activity extends BaiduBaseActivity {
                 drawer_layout.openDrawer(Gravity.LEFT);
                 break;
             case R.id.btn_end:
-                drawer_layout.openDrawer(Gravity.END);
+//                drawer_layout.openDrawer(Gravity.END);
+                LoginActivity.jumpLoginActivity(this);
                 break;
         }
     }
