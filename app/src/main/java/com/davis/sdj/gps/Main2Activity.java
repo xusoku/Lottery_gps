@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.baidu.mapapi.map.BaiduMap;
@@ -40,6 +41,7 @@ public class Main2Activity extends BaiduBaseActivity {
 
     private DrawerLayout drawer_layout;
     private Button btn_start, btn_end;
+    private LinearLayout linear_start, linear_end;
 
     @Override
     protected int setLayoutView() {
@@ -58,6 +60,8 @@ public class Main2Activity extends BaiduBaseActivity {
         drawer_layout = $(R.id.drawer_layout);
         btn_start = $(R.id.btn_start);
         btn_end = $(R.id.btn_end);
+        linear_start = $(R.id.linear_left);
+        linear_end = $(R.id.linear_right);
 
         mMapView = (MapView) findViewById(R.id.map);
         mBaiduMap = mMapView.getMap();
