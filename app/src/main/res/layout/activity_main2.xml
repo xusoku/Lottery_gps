@@ -42,11 +42,7 @@
         android:background="@color/colorPrimary"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="test1" />
+       <include layout="@layout/item_mian_base"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/linear_right"

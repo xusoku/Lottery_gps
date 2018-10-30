@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:onClick="doClick"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/main_icon1"
+        android:layout_marginTop="20dp"
+        android:layout_width="@dimen/common_measure_50dp"
+        android:layout_height="@dimen/common_measure_50dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_photo"/>
+
+    <com.davis.sdj.views.CustomTypefaceTextView
+        android:id="@+id/main_tv_icon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintLeft_toRightOf="@id/main_icon1"
+        app:layout_constraintTop_toTopOf="@id/main_icon1"
+        app:layout_constraintBottom_toBottomOf="@id/main_icon1"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

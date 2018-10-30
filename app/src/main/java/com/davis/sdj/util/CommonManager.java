@@ -70,7 +70,7 @@ public class CommonManager
      * 字体
      */
     public static Typeface mChineseTypeface = null;
-    public final static String FONT_CHINESE = "fonts/FontAwesome.otf";
+    public final static String FONT_CHINESE = "fonts/RobotoLight.ttf";
 
     public static Typeface mNumberTypeface = null;
     public final static String FONT_NUMBER = "fonts/DINCond_Light.otf";

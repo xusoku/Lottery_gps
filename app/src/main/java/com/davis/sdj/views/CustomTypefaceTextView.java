@@ -12,11 +12,6 @@ import com.davis.sdj.util.CommonManager;
 
 
 /**
- * Author: Kejin ( Liang Ke Jin )
- * Date: 2015/11/16
- */
-
-/**
  * 自定义字体的TextView
  * 字体放在 assets/fonts/XXXX.ttf
  */

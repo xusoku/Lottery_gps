@@ -45,6 +45,7 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="aB7ndBs1M5lF6mdtoqNGmrOj8atoSjjA" />
+
         <service android:name="com.davis.sdj.service.ScreenSaverS" />
 
         <!-- 调用新浪客户端分享，需要注册的回调activity -->
@@ -170,14 +171,17 @@
         <activity
             android:name="com.davis.sdj.activity.base.IsOnclickActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <activity android:name="com.davis.sdj.lottery.LotteryHallActivity"></activity>
+        <activity android:name="com.davis.sdj.lottery.LotteryHallActivity" />
         <activity android:name="com.davis.sdj.lottery.TestActivity" />
         <activity android:name="com.davis.sdj.lottery.LotteryOrderActivity" />
-        <activity android:name="com.davis.sdj.activity.MainActivity">
-
-        </activity>
+        <activity android:name="com.davis.sdj.activity.MainActivity" />
         <activity android:name="com.davis.sdj.gps.Main2Activity">
 
+        </activity>
+        <activity
+            android:name="com.davis.sdj.gps.Main4Activity"
+            android:label="@string/title_activity_main4"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

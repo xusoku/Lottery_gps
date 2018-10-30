@@ -42,7 +42,8 @@ public class Main2Activity extends BaiduBaseActivity {
 
     private DrawerLayout drawer_layout;
     private Button btn_start, btn_end;
-    private LinearLayout linear_start, linear_end;
+    private LinearLayout linear_start, linear_end ;
+    private View linear_fun1;
 
     @Override
     protected int setLayoutView() {
@@ -58,11 +59,14 @@ public class Main2Activity extends BaiduBaseActivity {
     @Override
     protected void findViews() {
 
+        showTopBar();
+        setTitle("nihao ");
         drawer_layout = $(R.id.drawer_layout);
         btn_start = $(R.id.btn_start);
         btn_end = $(R.id.btn_end);
         linear_start = $(R.id.linear_left);
         linear_end = $(R.id.linear_right);
+        linear_fun1 = $(R.id.linear_fun1);
 
         mMapView = (MapView) findViewById(R.id.map);
         mBaiduMap = mMapView.getMap();
@@ -82,14 +86,17 @@ public class Main2Activity extends BaiduBaseActivity {
     public void doClick(View view) {
 
         switch (view.getId()) {
+            case R.id.linear_fun1:
+                LoginActivity.jumpLoginActivity(Main2Activity.this);
+                startActivity(new Intent(this,Main4Activity.class));
+                break;
             case R.id.btn_start:
                 drawer_layout.openDrawer(Gravity.LEFT);
                 break;
             case R.id.btn_end:
 //                drawer_layout.openDrawer(Gravity.END);
-                LoginActivity.jumpLoginActivity(this);
+
                 break;
         }
     }
-
 }
