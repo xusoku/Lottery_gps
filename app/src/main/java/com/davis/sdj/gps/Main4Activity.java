@@ -15,42 +15,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.model.LatLng;
 import com.davis.lottery.R;
+import com.davis.sdj.activity.LoginActivity;
 import com.davis.sdj.util.ToastUitl;
 
-public class Main4Activity extends AppCompatActivity
+public class Main4Activity extends BaiduBaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-
-
-        NavigationView nav_view= (NavigationView) findViewById(R.id.nav_view)
-                ;
-        nav_view.setNavigationItemSelectedListener(this);
-
-
-    }
+    Toolbar toolbar;
+    DrawerLayout drawer;
+    FloatingActionButton fab;
+    NavigationView nav_view,nav_end_view;
 
     @Override
     public void onBackPressed() {
@@ -64,16 +40,12 @@ public class Main4Activity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main4, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -92,7 +64,7 @@ public class Main4Activity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-            ToastUitl.showToast("nav_camera");
+            LoginActivity.jumpLoginActivity(this);
         } else if (id == R.id.nav_gallery) {
             ToastUitl.showToast("nav_gallery");
         } else if (id == R.id.nav_slideshow) {
@@ -105,8 +77,65 @@ public class Main4Activity extends AppCompatActivity
             ToastUitl.showToast("nav_send");
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected int setLayoutView() {
+        return R.layout.activity_main4;
+    }
+
+    @Override
+    protected void initVariable() {
+
+    }
+
+    @Override
+    protected void findViews() {
+        super.findViews();
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        nav_view = (NavigationView) findViewById(R.id.nav_view);
+
+
+        nav_end_view = (NavigationView) findViewById(R.id.nav_end_view);
+
+
+    }
+
+    @Override
+    protected void initData() {
+        super.initData();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+
+    }
+
+    @Override
+    protected void setListener() {
+        nav_end_view.setNavigationItemSelectedListener(this);
+        nav_view.setNavigationItemSelectedListener(this);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
+            }
+        });
+
+    }
+
+    @Override
+    public void doClick(View view) {
+
     }
 }

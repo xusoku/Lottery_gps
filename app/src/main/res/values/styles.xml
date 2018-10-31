@@ -4,9 +4,9 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colormain</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/white</item>
-        <item name="colorControlHighlight">@color/colormain</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
     </style>
     ／
 
@@ -18,12 +18,12 @@
 
     <style name="CartTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorAccent">@color/colormain</item>
+        <item name="colorAccent">@color/colorPrimary</item>
     </style>
 
     <style name="colormainTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorAccent">@color/colormain</item>
+        <item name="colorAccent">@color/colorPrimary</item>
     </style>
 
 

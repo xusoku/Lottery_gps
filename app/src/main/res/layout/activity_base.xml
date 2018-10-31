@@ -7,7 +7,7 @@
     <View
         android:id="@+id/customStatusBarView"
         android:layout_width="match_parent"
-        android:layout_height="25dp"
+        android:layout_height="24dp"
         android:visibility="gone" />
 
     <RelativeLayout

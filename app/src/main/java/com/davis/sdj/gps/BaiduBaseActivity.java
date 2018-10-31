@@ -84,9 +84,17 @@ public abstract class BaiduBaseActivity extends BaseActivity {
         markOverly("asdf");
     }
 
-    protected abstract void findViews();
+    protected void findViews(){
+        mMapView = (MapView) findViewById(R.id.map);
+        mBaiduMap = mMapView.getMap();
 
-    protected abstract void initData();
+        mMapView.showZoomControls(false);
+    };
+
+    protected void initData(){
+
+        LocationFun(new LatLng(31.081981, 121.528337)); // 默认  ;
+    };
 
     protected abstract void setListener();
 

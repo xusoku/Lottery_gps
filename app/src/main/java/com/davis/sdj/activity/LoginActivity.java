@@ -71,7 +71,7 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void findViews() {
 
-        showTopBar();
+//        showTopBar();
 //        getRightTextButton().setText("返回首页");
 
         login_btn = $(R.id.login_btn);

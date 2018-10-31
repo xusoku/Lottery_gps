@@ -64,7 +64,7 @@ public abstract class BaseActivity extends PermissionActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
         MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
-        setTranslucentStatusBar(R.color.colormain);
+        setTranslucentStatusBar(R.color.colorPrimary);
         AppManager.getAppManager().addActivity(this);
         initBase();
         addContentView();

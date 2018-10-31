@@ -4,27 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colormain"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/colormain"
+        android:background="@color/colorPrimary"
         android:orientation="vertical">
 
         <ImageView
             android:layout_width="@dimen/common_measure_250dp"
             android:layout_height="@dimen/common_measure_150dp"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="@dimen/common_measure_20dp"
+            android:layout_margin="@dimen/common_measure_40dp"
+            android:src="@drawable/ic_my_location_black_24dp"
             />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/inputtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_measure_10dp"
             android:layout_marginLeft="@dimen/common_measure_30dp"
             android:layout_marginRight="@dimen/common_measure_30dp"
             android:hint="手机号/卡号"
@@ -36,7 +37,7 @@
                 android:layout_height="match_parent"
                 android:background="@null"
                 android:drawableBottom="@drawable/line"
-                android:drawableLeft="@mipmap/ic_launcher"
+                android:drawableLeft="@drawable/ic_phone_iphone_black_24dp"
                 android:drawablePadding="5dp"
                 android:gravity="center_vertical"
                 android:textSize="@dimen/text_size_22"
@@ -57,6 +58,7 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_measure_10dp"
                 android:textColorHint="#bbffffff">
 
                 <com.davis.sdj.views.CustomTypefaceEditText
@@ -65,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:drawableBottom="@drawable/line"
-                    android:drawableLeft="@mipmap/ic_launcher"
+                    android:drawableLeft="@drawable/ic_identify_black_24dp"
                     android:drawablePadding="5dp"
                     android:gravity="center_vertical"
                     android:hint="验证码"
@@ -107,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:drawableBottom="@drawable/line"
-                android:drawableLeft="@mipmap/ic_launcher"
+                android:drawableLeft="@drawable/ic_password_black_24dp"
                 android:drawablePadding="5dp"
                 android:gravity="center_vertical"
                 android:hint="密码"
