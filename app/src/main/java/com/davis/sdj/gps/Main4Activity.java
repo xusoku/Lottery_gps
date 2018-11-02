@@ -25,7 +25,7 @@ public class Main4Activity extends BaiduBaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Toolbar toolbar;
     DrawerLayout drawer;
-    FloatingActionButton fab;
+    FloatingActionButton fab,fab_location;
     NavigationView nav_view,nav_end_view;
 
     @Override
@@ -100,6 +100,7 @@ public class Main4Activity extends BaiduBaseActivity
         setSupportActionBar(toolbar);
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab_location = (FloatingActionButton) findViewById(R.id.fab_location);
 
         nav_view = (NavigationView) findViewById(R.id.nav_view);
 
@@ -127,12 +128,18 @@ public class Main4Activity extends BaiduBaseActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
+                setMaptoSpace();
+            }
+        });
+        fab_location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LocationFun(new LatLng(31.081981, 121.528337)); // 默认  ;
             }
         });
 
     }
+
 
     @Override
     public void doClick(View view) {

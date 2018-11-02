@@ -91,6 +91,8 @@ public abstract class BaiduBaseActivity extends BaseActivity {
         mMapView.showZoomControls(false);
     };
 
+    protected void setMaptoSpace() {
+    }
     protected void initData(){
 
         LocationFun(new LatLng(31.081981, 121.528337)); // 默认  ;

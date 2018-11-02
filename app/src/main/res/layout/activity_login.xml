@@ -40,6 +40,7 @@
                 android:drawableLeft="@drawable/ic_phone_iphone_black_24dp"
                 android:drawablePadding="5dp"
                 android:gravity="center_vertical"
+                android:inputType="number"
                 android:textSize="@dimen/text_size_22"
                 android:maxLines="1"
                 android:singleLine="true"

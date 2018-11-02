@@ -175,12 +175,10 @@
         <activity android:name="com.davis.sdj.lottery.TestActivity" />
         <activity android:name="com.davis.sdj.lottery.LotteryOrderActivity" />
         <activity android:name="com.davis.sdj.activity.MainActivity" />
-        <activity android:name="com.davis.sdj.gps.Main2Activity">
 
-        </activity>
         <activity
             android:name="com.davis.sdj.gps.Main4Activity"
-            android:label="@string/title_activity_main4"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
