@@ -2,6 +2,7 @@ package com.davis.sdj.api;
 
 
 import com.davis.sdj.model.BigPictrue;
+import com.davis.sdj.model.LoginBean;
 import com.davis.sdj.model.WeixinInfo;
 import com.davis.sdj.model.basemodel.BaseModel;
 import com.davis.sdj.model.basemodel.Page;
@@ -28,8 +29,8 @@ import retrofit2.http.Query;
 public interface ApiService {
 
 
-    public static String baseurl="http://";
-    public static String picurl="http://";
+    public static String baseurl="https://api.openluat.com";
+    public static String picurl="http://api.shumm.com/sxs/common";
 
     //http://www.tngou.net/tnfs/api/list?page=1&rows=10
 //        @GET("tnfs/api/list")
@@ -40,11 +41,13 @@ public interface ApiService {
 //    Call<User> getUser(@Query("name") String name, @Query("password") String password);
 
     //1、用户登陆
-    @POST("user/login.do")
-    Call<BaseModel> userLogin(
-            @Query("apptype") String apptype,
-            @Query("phone") String phone,
-            @Query("password") String password);
+    @POST("/sjx/common")
+    Call<LoginBean> userLogin(
+            @Query("class") String type,
+            @Query("mobile") String phone,
+            @Query("passwd") String password,
+            @Query("registration_id") String registration_id
+            );
 
     //2、用户 注册
     @POST("user/register.do")

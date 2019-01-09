@@ -19,6 +19,7 @@ import com.davis.sdj.activity.base.BaseActivity;
 import com.davis.sdj.api.ApiCallback;
 import com.davis.sdj.api.ApiInstant;
 import com.davis.sdj.api.ApiService;
+import com.davis.sdj.model.LoginBean;
 import com.davis.sdj.model.basemodel.BaseModel;
 import com.davis.sdj.util.CommonManager;
 import com.davis.sdj.util.SharePreferenceUtils;
@@ -27,6 +28,8 @@ import com.davis.sdj.util.WeixinLoginUtil;
 
 import de.greenrobot.event.EventBus;
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends BaseActivity {
 
@@ -196,6 +199,17 @@ public class LoginActivity extends BaseActivity {
                     if(pwdb&&loginb){
                         progressDialog.show();
 
+                        ApiInstant.getInstant().userLogin("Login",mobile,pwd,"18071adc0323661115a").enqueue(new Callback<LoginBean>() {
+                            @Override
+                            public void onResponse(Call<LoginBean> call, Response<LoginBean> response) {
+                               LoginBean str= response.body();
+                            }
+
+                            @Override
+                            public void onFailure(Call<LoginBean> call, Throwable t) {
+                               String str=t.getMessage();
+                            }
+                        });
                     }
                 } else {
                     if(pwdb&&loginb&&codeb){
